@@ -1,0 +1,18 @@
+with open('million.txt', 'r') as lectura:
+    texto = lectura.read()
+
+with open('password.txt', 'r') as password:
+    contra = password.read()
+
+def comparar(passw):
+    for i in range(len(texto)):
+        for j in range(3):
+            textoJoin = texto[i:i+j+5]
+           
+            if contra == textoJoin:
+                print(textoJoin)
+                return
+            ++j
+        ++i
+
+comparar(contra)
